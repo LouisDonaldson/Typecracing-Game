@@ -32,9 +32,6 @@ function StartGame(game_text) {
         current_char++;
         Refresh();
       }
-      // p.textContent = `KeyboardEvent: key='${event.key}' | code='${event.code}'`;
-      // document.getElementById("output").appendChild(p);
-      // window.scrollTo(0, document.body.scrollHeight);
     });
   };
 
