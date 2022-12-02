@@ -3,6 +3,7 @@ const sample_text = [
   "This is a really cool website, I hope you enjoy your stay :).",
   `gleeful story," said D'Angelo Johnson, who was born and raised in Bakersfield, Calif. Mr. Johnson grew up in the Bay Area, where he learned cooking; at the restaurant he opened K-Mart, where he worked as a sales clerk.`,
   `fire and destruction of the land (the desert). You have the ability to do it on your turn (in a way that grants you extra life, and also that lets the enemy land on you). It is usually more effective if you have a fast lane, and it can be difficult to get the enemy to be careful enough to use your speed to get the most out of your lane if your lane isn't very good and you want someone playing a lot of different characters.`,
+  "this is some text.",
 ];
 
 const start_btn = document.querySelector(".start_btn");
