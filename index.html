@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,34 @@
     <title>Typing Website</title>
     <link rel="stylesheet" href="./index.css">
     <script src="./index.js" defer></script>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
     <div class="main_content">
-        This is the main content
-    </div>
-    <div class="main_content sub">
-        This is the sub content
+        Typeracing Website
     </div>
 
-    <div class="typing_text_box">
-        <b>Sample Text:</b> Merry alone do it burst me songs. Sorry equal charm joy her those folly ham. In they no is many both. Recommend new contented intention improving bed performed age. Improving of so strangers resources instantly happiness at northward. Danger nearer length oppose really add now either. But ask regret eat branch fat garden. Become am he except wishes. Past so at door we walk want such sang. Feeling colonel get her garrets own.
+    <div class="p-2">
+        <div class="text_enter_div">
+            <textarea type="textarea" id="text_enter_input"
+                placeholder="Enter the text you want to write here, or click 'Start' for random text." rows="5"
+                cols="60"></textarea>
+            <div class="start_btn_div">
+                <div class="loading_text"></div>
+                <div class="start_btn btn btn-primary">
+                    Start
+                </div>
+            </div>
+        </div>
+        <div class="typing_text_box">
+            Click 'Start' to start playing...
+        </div>
     </div>
-    
 </body>
+
 </html>
