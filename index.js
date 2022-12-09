@@ -22,56 +22,34 @@ function StartGame(game_text) {
   let current_char = 0;
   const chars_inputted = [];
   let finished = false;
+  const user_input_text = "";
+  const correct_text = "";
+
   const start = () => {
     text_enter_input.focus = true;
     Refresh();
     window.addEventListener("keydown", (event) => {
-      if (finished) {
-        return;
-      }
-      chars_inputted.push(event.key);
-      try {
-        if (event.key == text[current_char].toLowerCase()) {
-          current_char++;
-          Refresh();
-        }
-        
-      } catch {
-        if (event.key == text[current_char]) {
-          current_char++;
-          Refresh();
-        }
-      }
+      user_input_text += `${event.key}`;
+      Refresh();
     });
   };
 
-  const Refresh = async (finished = false) => {
-    if (!finished) {
-      if (current_char >= text.length) {
-        end_time = new Date();
-        const taken = (end_time - start_time) / 1000;
-        loading_text.textContent = `Well done, you have finished.\nCompleted in: ${taken}'s`;
-        window.removeEventListener("keydown", () => {});
-        typing_text_box.innerHTML = "Click 'Start' to start playing...";
-
-        finished = true;
-      } else {
-        finished = false;
-        let temp_string = "";
-        const text_div = document.createElement(`span`);
-        for (const char_index in text) {
-          if (char_index == current_char) {
-            temp_string += `<span class="cursor_virtual">|</span>${text[char_index]}`;
-          } else if (char_index < current_char) {
-            temp_string += `<span class="green_text">${text[char_index]}</span>`;
-            temp_string += text[char_index];
-          }
-        }
-        typing_text_box.innerHTML = temp_string;
-      }
-    } else {
-      typing_text_box.innerHTML = "Click 'Start' to start playing...";
+  const Refresh = () => {
+    let temp_string = "";
+    for (let i = 0; i < user_input_text; i++) {
+      // loop through already typed text, comparing characters
     }
+    for (let i = user_input_text.length; i < text.length - 1; i++) {
+      // loop through rest of string to write, printing it out
+      if (i == current_char) {
+        temp_string += `<span class="cursor_virtual">|</span>${text[i]}`;
+      } else if (i < current_char) {
+        temp_string += `<span class="green_text">${text[i]}</span>`;
+      } else {
+        temp_string += text[i];
+      }
+    }
+    typing_text_box.innerHTML = temp_string;
   };
 
   const loading_text = document.querySelector(".loading_text");
