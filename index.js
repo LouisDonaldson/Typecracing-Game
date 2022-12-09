@@ -35,6 +35,7 @@ function StartGame(game_text) {
           current_char++;
           Refresh();
         }
+        
       } catch {
         if (event.key == text[current_char]) {
           current_char++;
@@ -63,7 +64,6 @@ function StartGame(game_text) {
             temp_string += `<span class="cursor_virtual">|</span>${text[char_index]}`;
           } else if (char_index < current_char) {
             temp_string += `<span class="green_text">${text[char_index]}</span>`;
-          } else {
             temp_string += text[char_index];
           }
         }
